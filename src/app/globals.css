@@ -4,8 +4,8 @@
 
 body {
   font-synthesis: none;
+  /* font-family: "Roboto", sans-serif; */
 }
-
 
 @layer base {
   :root {
@@ -63,7 +63,6 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
-
 
 @layer base {
   * {
