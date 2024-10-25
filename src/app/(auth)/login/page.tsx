@@ -14,9 +14,9 @@ export default function Page() {
       <div className="flex h-full max-h-[40rem] w-full max-w-[64rem] overflow-hidden rounded-2xl bg-card shadow-2xl">
         <div className="w-full space-y-10 overflow-y-hidden p-10 md:w-1/2">
           <div className="space-y-1 text-center">
-            <h1 className="text-3xl font-bold">Entre no Tech Connect</h1>
-            <p className="text-muted-foreground">
-              Um lugar para <span className="italic">você</span> se conectar com
+            <h1 className="text-3xl font-sans">Entre no Tech Connect</h1>
+            <p className="text-muted-foreground font-sans text-sm">
+              Um lugar para <span className="text-primary font-semibold">você</span> se conectar com
               o mundo Tech
             </p>
           </div>
@@ -24,7 +24,7 @@ export default function Page() {
             <LoginForm />
             <Link
               href={"/signup"}
-              className="block text-center hover:underline"
+              className="block text-center hover:underline font-sans"
             >
               Ainda não tem uma conta? Cadastre-se
             </Link>

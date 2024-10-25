@@ -47,9 +47,9 @@ export default function LoginForm() {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel className="font-sans">Username</FormLabel>
               <FormControl>
-                <Input placeholder="Username" {...field} />
+                <Input placeholder="Username" className="font-sans"{...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -60,16 +60,16 @@ export default function LoginForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Senha</FormLabel>
+              <FormLabel className="font-sans">Senha</FormLabel>
               <FormControl>
-                <PasswordInput placeholder="Senha" {...field} />
+                <PasswordInput placeholder="Senha" className="font-sans"{...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <LoadingButton loading={isPending} type="submit" className="w-full">
+        <LoadingButton loading={isPending} type="submit" className="w-full font-sans">
           Criar conta
         </LoadingButton>
       </form>
