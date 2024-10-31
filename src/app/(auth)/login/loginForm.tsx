@@ -6,7 +6,7 @@ import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { login } from "./actions";
 import {
-    Form,
+  Form,
   FormControl,
   FormField,
   FormItem,
@@ -49,7 +49,11 @@ export default function LoginForm() {
             <FormItem>
               <FormLabel className="font-sans">Username</FormLabel>
               <FormControl>
-                <Input placeholder="Username" className="font-sans"{...field} />
+                <Input
+                  placeholder="Username"
+                  className="font-sans"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -62,15 +66,23 @@ export default function LoginForm() {
             <FormItem>
               <FormLabel className="font-sans">Senha</FormLabel>
               <FormControl>
-                <PasswordInput placeholder="Senha" className="font-sans"{...field} />
+                <PasswordInput
+                  placeholder="Senha"
+                  className="font-sans"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <LoadingButton loading={isPending} type="submit" className="w-full font-sans">
-          Criar conta
+        <LoadingButton
+          loading={isPending}
+          type="submit"
+          className="w-full font-sans"
+        >
+          Entrar
         </LoadingButton>
       </form>
     </Form>
