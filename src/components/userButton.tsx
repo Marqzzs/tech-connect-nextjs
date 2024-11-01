@@ -12,7 +12,9 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import UserAvatar from "./userAvatar";
 import Link from "next/link";
-import { UserIcon } from "lucide-react";
+import { LogOutIcon, UserIcon } from "lucide-react";
+import { logout } from "@/app/(auth)/actions";
+import { cn } from "@/lib/utils";
 
 interface UserButtonProps {
   className?: string;
@@ -23,7 +25,7 @@ export default function UserButton({ className }: UserButtonProps) {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      <DropdownMenuTrigger className={cn("flex-none rounded-full", className)}>
         <UserAvatar avatarUrl={user.avatarUrl} />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
@@ -32,10 +34,21 @@ export default function UserButton({ className }: UserButtonProps) {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <Link href={`/users/${user.username}`}>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="font-sans">
             <UserIcon className="mr-2 size-4" />
+            Perfil
           </DropdownMenuItem>
         </Link>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem
+          onClick={() => {
+            logout();
+          }}
+          className="font-sans"
+        >
+          <LogOutIcon className="mr-2 size-4" />
+          Sair
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
