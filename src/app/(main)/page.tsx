@@ -1,14 +1,7 @@
-import Image from "next/image";
-import { Roboto } from 'next/font/google'
-
-const roboto = Roboto({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-})
-
 export default function Home() {
-
   return (
-  <main>Front page</main>
+    <main className="h-[200vh] w-full bg-slate-50">
+      <div className="w-full"></div>
+    </main>
   );
 }
